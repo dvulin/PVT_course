@@ -40,6 +40,6 @@ def add_component(c_name, zi=None):
     return fluid_database
 
 
-add_component("bzvz")
+add_component("Water")
 add_component("CO2")
 fluid_table = pd.DataFrame(fluid_database)

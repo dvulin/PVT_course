@@ -3,4 +3,12 @@ name = "pvt-2026-27"
 version = "0.1.0"
 description = "Add your description here"
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "coolprop>=8.1.0",
+    "pandas>=3.1.1",
+]
+
+[dependency-groups]
+spyder = [
+    "spyder-kernels>=3.1.0,<3.2.0",
+]
