@@ -470,10 +470,6 @@ source = { virtual = "." }
 dependencies = [
     { name = "coolprop" },
     { name = "pandas" },
-]
-
-[package.dev-dependencies]
-spyder = [
     { name = "spyder-kernels" },
 ]
 
@@ -481,10 +477,8 @@ spyder = [
 requires-dist = [
     { name = "coolprop", specifier = ">=8.1.0" },
     { name = "pandas", specifier = ">=3.1.1" },
+    { name = "spyder-kernels", specifier = ">=3.1.0,<3.2.0" },
 ]
-
-[package.metadata.requires-dev]
-spyder = [{ name = "spyder-kernels", specifier = ">=3.1.0,<3.2.0" }]
 
 [[package]]
 name = "pycparser"
