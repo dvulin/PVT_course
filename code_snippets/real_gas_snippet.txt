@@ -1,0 +1,82 @@
+# pvtfunctions/real_gas.py
+import math
+
+
+class RealGas:
+  """Jednostavni proračuni iz jednadžbe stanja realnog plina: p * V = Z * n * R * T."""
+
+  R: float = 8.314462618  # J / (mol * K)
+
+  @staticmethod
+  def pressure(
+      V: float, Z: float = 1.0, n: float = 1.0, T: float = 288.15
+  ) -> float:
+    """Tlak p [Pa] iz V [m3], Z [-], n [mol] i T [K]."""
+    return (Z * n * RealGasLaw.R * T) / V
+
+  @staticmethod
+  def volume(
+      p: float, Z: float = 1.0, n: float = 1.0, T: float = 288.15
+  ) -> float:
+    """Volumen V [m3] iz p [Pa], Z [-], n [mol] i T [K]."""
+    return (Z * n * RealGasLaw.R * T) / p
+
+  @staticmethod
+  def molar_volume(p: float, Z: float = 1.0, T: float = 288.15) -> float:
+    """Molarni volumen V_m = V/n [m3/mol] iz p [Pa], Z [-] i T [K]."""
+    return (Z * RealGasLaw.R * T) / p
+
+  @staticmethod
+  def moles(p: float, V: float, Z: float = 1.0, T: float = 288.15) -> float:
+    """Količina tvari n [mol] iz p [Pa], V [m3], Z [-] i T [K]."""
+    return (p * V) / (Z * RealGasLaw.R * T)
+
+  @staticmethod
+  def temperature(
+      p: float, V: float, Z: float = 1.0, n: float = 1.0
+  ) -> float:
+    """Temperatura T [K] iz p [Pa], V [m3], Z [-] i n [mol]."""
+    return (p * V) / (Z * n * RealGas.R)
+
+  @staticmethod
+  def z_factor(p: float, V: float, n: float = 1.0, T: float = 288.15) -> float:
+    """Faktor stlačivosti Z [-] iz p [Pa], V [m3], n [mol] i T [K]."""
+    return (p * V) / (n * RealGas.R * T)
+
+  @staticmethod
+  def density(
+      p: float, molar_mass_kg_mol: float, Z: float = 1.0, T: float = 288.15
+  ) -> float:
+    """Gustoća rho [kg/m3] iz p [Pa], molarne mase M [kg/mol], Z [-] i T [K]."""
+    return (p * molar_mass_kg_mol) / (Z * RealGas.R * T)
+
+  @staticmethod
+  def mass_from_moles(n: float, molar_mass_kg_mol: float) -> float:
+    """Masa m [kg] iz količine tvari n [mol] i molarne mase M [kg/mol]."""
+    return n * molar_mass_kg_mol
+
+  @staticmethod
+  def moles_from_mass(mass_kg: float, molar_mass_kg_mol: float) -> float:
+    """Količina tvari n [mol] iz mase m [kg] i molarne mase M [kg/mol]."""
+    return mass_kg / molar_mass_kg_mol
+
+  @staticmethod
+  def c_to_k(temp_c: float) -> float:
+    """Konverzija temperature iz °C u K."""
+    return temp_c + 273.15
+
+  @staticmethod
+  def k_to_c(temp_k: float) -> float:
+    """Konverzija temperature iz K u °C."""
+    return temp_k - 273.15
+
+  @staticmethod
+  def bar_to_pa(p_bar: float) -> float:
+    """Konverzija tlaka iz bar u Pa."""
+    return p_bar * 1e5
+
+  @staticmethod
+  def pa_to_bar(p_pa: float) -> float:
+    """Konverzija tlaka iz Pa u bar."""
+    return p_pa / 1e5
+

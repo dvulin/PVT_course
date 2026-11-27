@@ -10,8 +10,10 @@ p*M = rho*R*T
 import CoolProp.CoolProp as CP
 import pandas as pd
 
+# CP.get_global_param_string("FluidsList")
+
 fluid = "Water"
-#M = 28.97                   # g/mol    | molarna masa zraka
+#M = 28.97                  # g/mol     | molarna masa zraka
 M = 18.015                  # g/mol     | molarna masa vode
 p = 101325                  # Pa        | tlak sustava
 T = 15.6+273.15             # K         | temperatura sustava
