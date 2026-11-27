@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<root>
+ <n name="worker_version">3</n>
+ <a name="counters" size="6">
+  <an name="0">
+   <g name="value">
+    <g name="1">
+     <n name="str_key">Resources/70F84FD2-F1B3-4B37-5523-0EDBA2F9DDC2.res</n>
+     <n name="data_type">shared</n>
+    </g>
+    <n name="2">1</n>
+   </g>
+  </an>
+  <an name="1">
+   <g name="value">
+    <g name="1">
+     <n name="str_key">Resources/C36A8EB9-36C2-0137-9255-46F37A1BFE1C.res</n>
+     <n name="data_type">shared</n>
+    </g>
+    <n name="2">1</n>
+   </g>
+  </an>
+  <an name="2">
+   <g name="value">
+    <g name="1">
+     <n name="str_key">Resources/EC4F936F-5DEE-FF80-59BA-C26608B1D7B1.res</n>
+     <n name="data_type">shared</n>
+    </g>
+    <n name="2">1</n>
+   </g>
+  </an>
+  <an name="3">
+   <g name="value">
+    <g name="1">
+     <n name="str_key">project/project.tnavd</n>
+     <n name="data_type">per_project</n>
+    </g>
+    <n name="2">1</n>
+   </g>
+  </an>
+  <an name="4">
+   <g name="value">
+    <g name="1">
+     <n name="str_key">project/project.tnavp</n>
+     <n name="data_type">per_project</n>
+    </g>
+    <n name="2">1</n>
+   </g>
+  </an>
+  <an name="5">
+   <g name="value">
+    <g name="1">
+     <n name="str_key">pvt_designer/0.pvtfiles/project.pvtproject</n>
+     <n name="data_type">per_project</n>
+    </g>
+    <n name="2">1</n>
+   </g>
+  </an>
+ </a>
+</root>

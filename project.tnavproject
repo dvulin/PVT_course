@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<root>
+ <n name="worker_version">3</n>
+ <n name="project_version">22.2.4</n>
+ <n name="gt_version">v26_1_20260408_1</n>
+ <n name="tNavigator_Project_File_Version">271828182</n>
+ <n name="tNavigator_version">v26.1-4591-gf56bb906d003</n>
+ <n name="parent_project" />
+ <g name="project_store_info">
+  <g name="data_store_settings">
+   <n name="data_store_type">lock_separate_files_compressed</n>
+   <n name="data_store_path" />
+   <g name="lock_data_store_settings">
+    <n name="lock_guid">EFB286BF-7AC3-322B-B753-92E113F41357</n>
+   </g>
+  </g>
+  <n name="prefix" />
+  <a name="vc_prefix" size="0" />
+ </g>
+ <n name="once_saved_in_master">false</n>
+ <n name="once_saved_in_dev_mode">false</n>
+</root>
